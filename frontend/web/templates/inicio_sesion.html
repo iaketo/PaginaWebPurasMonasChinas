@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión MONITES</title>
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        .boton {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .boton-container {
+            text-align: center;
+        }
+        .boton:hover {
+            background-color: #0056b3;
+        }
+        .logo {
+            max-width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 30px;
+            margin-top: 90px;
+        }
+        .logo-contenedor {
+            text-align: center;
+            margin-bottom: 15px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="main">
+            <div class="container">
+                <div class="logo-contenedor">
+                    <img src="{% static 'images/anime.jpg' %}" alt="Logo" class="logo">
+                </div>
+                <div class="sign-up-content">
+                    <form id="loginForm" class="signup-form" method="POST" action="{% url 'inicio_sesion' %}">
+                        {% csrf_token %}
+                        <h2 class="form-title">Inicio Sesión</h2>
+                        <div id="error-message" style="display: none; text-align: center; color: red"></div>
+                        {% if error_message %}
+                        <p>{{ error_message }}</p>
+                        {% endif %}
+                        <div class="form-textbox">
+                            <label for="name">Usuario</label>
+                            <input type="text" name="username_r" id="username_r">
+                        </div>
+                        <div class="form-textbox">
+                            <label for="pass">Contraseña</label>
+                            <input type="password" name="password_r" id="password_r">
+                        </div>
+                        <br>
+                        <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                            <button type="submit" class="boton">Iniciar Sesión</button>
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        ¿No tienes una cuenta?
+                        <a href="http://localhost:9020/web/login/" class="loginhere-link">Regístrate aquí</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

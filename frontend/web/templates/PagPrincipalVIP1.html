@@ -1,0 +1,472 @@
+{% load static %}
+<!DOCTYPE html>
+<!--
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>¡Bienvenidos a Monitos Chinos!</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="{% static 'paginaprincipal/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'paginaprincipal/css/styles.css' %}">
+    <noscript><link rel="stylesheet" href="{% static 'paginaprincipal/css/noscript.css' %}" /></noscript>
+    <link rel="stylesheet" href="{% static 'paginaprincipal/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'paginaprincipal/css/styles.css' %}">
+    <noscript><link rel="stylesheet" href="{% static 'paginaprincipal/css/noscript.css' %}" /></noscript>
+    <style>
+      #user-info {
+        position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: opacity 0.3s ease;
+      }
+  </style>
+  
+  </head>
+  
+  <body class="is-preload">
+    
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+      
+      <!-- Intro -->
+      <div id="intro">
+        <h1>
+          
+          Puros Monos <br />
+          Chinos
+        </h1>
+
+
+      
+<script>
+  window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    var userInfo = document.getElementById("user-info");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        userInfo.classList.remove("hidden"); // Mostrar el mensaje si se ha desplazado hacia abajo
+    } else {
+        userInfo.classList.add("hidden"); // Ocultar el mensaje si está en la parte superior
+    }
+}
+</script>
+        <p>
+          Una pagina dedicada a la adoracion hacia los/as monitos chinos. 
+          Creado
+          por:
+          <a style="color: lightpink;" href="https://steamcommunity.com/id/MrLazz/">@Marcelo Baeza</a>
+          <a style="color: rgb(0,288, 144);" href="https://steamcommunity.com/profiles/76561198996479691/"
+            >     @Demis Diaz</a
+          >
+          <a style="color: rgb(217, 147, 237);" href="https://steamcommunity.com/profiles/76561199029312280/"
+            >@Alvaro eyzaguirre</a
+          >
+          <a style="color: skyblue;" href="https://steamcommunity.com/id/iaket/"> @Nicolas Troncoso </a>
+          Para
+          <a
+            href="https://www.w3schools.com/bootstrap/bootstrap_get_started.asp"
+            >La clase del tio harrys.</a
+          >
+          <br />
+          esto fue inspirado y estructurado gracias a :
+          <a href="https://html5up.net/license"
+            >Pagina De Free Html Templates.</a
+          >.
+        </p>
+        <ul class="actions">
+          <li>
+            <a
+              href="#header"
+              class="button icon solid solo fa-arrow-down scrolly"
+              >Continuar</a
+            >
+          </li>
+        </ul>
+      </div>
+      
+
+    </header>
+
+    <!-- Botón "Adicional" en la esquina derecha superior -->
+    <div id="menu-btn-container">
+      <div class="menu-btn" id="menu-btn">≡MENU VIP</div>
+  </div>
+  <!-- Panel lateral oculto -->
+  <div id="sidebar">
+      <ul>
+          <ul>
+            <li><a href="{% url 'crudVIP' %}"><i class="fas fa-cogs"></i> >Configuracion</a></li>
+            <li class="active"><a href="{% url 'pagprincipalvip1' %}"><i class="fas fa-home"></i> >Página
+                Principal</a></li>
+            <li><a href="{% url 'anime_saludvip' %}"><i class="fas fa-heartbeat"></i> >Anime/Salud</a></li>
+            <li><a href="{% url 'galeriavip' %}"><i class="fas fa-images"></i> >Galería de Monites</a></li>
+            <li><a href="{% url 'nosotrosvip' %}"><i class="fas fa-check"></i> >Nosotros</a></li>
+            <li><a id="cerrar-sesion"><i class="fas fa-sign-out-alt"></i> >Cerrar Sesion</a></li>
+
+          </ul>
+      </ul>
+      <ul class="icons">
+          <li>
+              <a href="https://twitter.com/?lang=es" class="icon brands fa-twitter"><span
+                      class="label">Twitter</span></a>
+          </li>
+          <li>
+              <a href="https://www.youtube.com/" class="icon brands alt fa-youtube"><span
+                      class="label">YouTube</span></a>
+          </li>
+          <li>
+              <a href="https://www.facebook.com/" class="icon brands fa-facebook-f"><span
+                      class="label">Facebook</span></a>
+          </li>
+          <li>
+              <a href="https://www.instagram.com/" class="icon brands fa-instagram"><span
+                      class="label">Instagram</span></a>
+          </li>
+          <li>
+              <a href="https://github.com/" class="icon brands fa-github"><span class="label">GitHub</span></a>
+          </li>
+      </ul>
+      <a href="#" id="close-btn" class="close-btn">×</a>
+  </div>
+  <!-- Header -->
+  <header id="header">
+      <div id="welcome-message"></div>
+      <div id="user-info">Bienvenido, usuario</div>
+
+      <a href="#" id="logoutButton" class="logo">login</a>
+
+
+  </header>
+
+
+</body>
+      <!-- Nav -->
+      <nav id="nav">
+        <ul class="links">
+          <li class="active"><a href="{% url 'pagprincipalvip1' %}">Pagina Principal</a></li>
+          <li><a href="{% url 'anime_saludvip' %}">Anime/Salud</a></li>
+          <li><a href="{% url 'galeriavip' %}">Galeria De Monites</a></li>
+          <li><a href="{% url 'nosotrosvip' %}">Nosotros</a></li>
+        </ul>
+        <ul class="icons">
+          <li>
+            <a
+              href="https://twitter.com/?lang=es"
+              class="icon brands fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+            <li>
+              <a href="https://www.youtube.com/" class="icon brands alt fa-youtube"
+                ><span class="label">YouTube</span></a
+              >
+            </li>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/"
+              class="icon brands fa-facebook-f"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/"
+              class="icon brands fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/" class="icon brands fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- Main -->
+      <div id="main">
+        <!-- Featured Post -->
+        <article class="post featured">
+          <header class="major">
+            <span class="date">Actualizada el abril 14,2024</span>
+            <h2>
+              <a
+                href="https://www.youtube.com/watch?v=ysH16i6jp-c&ab_channel=Kerchoo"
+                >Bienvenido a<br />
+                la mejor pagina de monas chinas del mundo...</a
+              >
+              <br />
+              <iframe
+                width="1280"
+                height="720"
+                src="https://www.youtube.com/embed/wgZ-ATUGXDw?si=oh6ykZmnik2r4OfR"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </h2>
+            <p>
+              Estas en la seccion como acabas de ver de la nostalgia pura de
+              monitos chinos 
+              <p style="-webkit-text-stroke: 1px; color: deeppink;">!Disfruta¡</p> 
+              de todos los monitos chinos que
+              reconozcas de tu infancia... <br />
+              sino renonociste a ninguno entonces no tienes infancia ¯\_( ͡❛ ͜ʖ ͡❛)_/¯.
+            </p>
+          </header>
+          
+          <a href="https://www.youtube.com/watch?v=bgYjEBOWTKQ&list=PLzhhd8Q7j4n0yYf-DW0W2Dl6eZ7UFTOG8&ab_channel=alvaropadilla" class="Imagen Nostalgica ConZoom"
+            ><img src="{% static 'paginaprincipal/images/collage-anime.jpg' %}" alt=""
+          /></a>
+          <ul class="actions special">
+            <li><a href="https://honeysanime.com/es/los-10-animes-mas-nostalgicos/" class="button large">Ver mas...</a></li>
+          </ul>
+        </article>
+
+        <h1 style="position:sticky;padding: auto;text-align: center;">Secciones</h1>
+
+        <!-- Posts -->
+        <section class="posts">
+          <article>
+            <header>
+              <span class="date">Abril 04, 2024</span>
+              <h2>
+                <a href="#"
+                  >Openings latinos<br />
+                  </a
+                >
+              </h2>
+            </header>
+              <a href="#" class="image fit"
+                ><img src="{% static 'paginaprincipal/images/Estos-son-los-mejores-opening-de-anime-en-espanol-latino.jpg' %}" alt=""
+              /></a>
+            <p>
+              Aca encontraras la seccion de openings latinos donde veras los mejores catalogados por la opinion popular.
+            </p>
+            <ul class="actions special">
+              <li><a href="https://www.youtube.com/watch?v=9Hbd1QeI1Og&list=PLVxk5Rgmvlk1gARQEvp4_1MpXxDaTsK1M&ab_channel=snakewalkerTK421" class="button">Ver</a></li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <span class="date">Marzo 25, 2024</span>
+              <h2>
+                <a href="#"
+                  >Opening Iconicos<br />
+                  </a
+                >
+              </h2>
+            </header>
+            <a href="#" class="image fit"
+              ><img src="{% static 'paginaprincipal/images/maxresdefault.jpg' %}" alt=""
+            /></a>
+            <p>
+              Aca veras los openings mas iconicos del los monitos chinos, aca regresaras de un golpe a tu infancia
+              .
+            </p>
+            <ul class="actions special">
+              <li><a href="https://www.youtube.com/watch?v=shsv-TTQSyo&pp=ygUQb3BlbmluZyBpY29uaWNvcw%3D%3D" class="button">Ver</a></li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <span class="date">Marzo 15, 2024</span>
+              <h2>
+                <a href="#"
+                  >Animes romanticos<br />
+                  </a
+                >
+              </h2>
+            </header>
+            <a href="#" class="image fit"
+              ><img src="{% static 'paginaprincipal/images/anime_romance.jpg' %}" alt=""
+            /></a>
+            <p>
+              Aca veran la seccion donde pertenecen los animes romanticos mas vistos segun la gente.
+            </p>
+            <ul class="actions special">
+              <li><a href="https://www.youtube.com/watch?v=Z3-Dd8FLhjA&pp=ygUmYW5pbWVzIHJvbWFudGljb3MgZGUgdG9kb3MgbG9zIHRpZW1wb3M%3D" class="button">Ver</a></li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <span class="date">Marzo 1, 2024</span>
+              <h2>
+                <a href="#"
+                  >Animes Seinen<br />
+                  </a
+                >
+              </h2>
+            </header>
+            <a href="#" class="image fit"
+              ><img src="{% static 'paginaprincipal/images/recomendacion-10-animes_seinen.jpg' %}" alt=""
+            /></a>
+            <p>
+              Aca la seccion donde el pusenso reina y lo inesperado golpeara tu puerta se recopilara
+              los mejores animes de este genero para brindarte una experiencia inolvidable.
+            </p>
+            <ul class="actions special">
+              <li><a href="https://www.youtube.com/watch?v=iVjLNhrvWbc&pp=ygUNYW5pbWVzIHNlaW5lbg%3D%3D" class="button">Ver</a></li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <span class="date">Febrero 28, 2024</span>
+              <h2>
+                <a href="#"
+                  >Animes Accion<br />
+                  </a
+                >
+              </h2>
+            </header>
+            <a href="#" class="image fit"
+              ><img src="{% static 'paginaprincipal/images/animes_accion.jpg' %}" alt=""
+            /></a>
+            <p>
+              La seccion de los mejores animes de accion donde 
+              encontraras lo mejor para gastar adrenalina.
+            </p>
+            <ul class="actions special">
+              <li><a href="https://www.youtube.com/watch?v=248pdeebk6E&pp=ygUNYW5pbWVzIGFjY2lvbg%3D%3D" class="button">Ver</a></li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <span class="date">Febrero 17, 2024</span>
+              <h2>
+                <a href="#"
+                  >Animes Terror<br />
+                  </a
+                >
+              </h2>
+            </header>
+            <a href="#" class="image fit"
+              ><img src="{% static 'paginaprincipal/images/animes_terror.jpg' %}" alt=""
+            /></a>
+            <p>
+              La clasica seccion infaltable de cada pagina donde se muestra el terror puro.
+            </p>
+            <ul class="actions special">
+              <li><a href="https://www.youtube.com/watch?v=cYhO6NHmw5U&pp=ygUNYW5pbWVzIHRlcnJvcg%3D%3D" class="button">Ver</a></li>
+            </ul>
+          </article>
+          
+        </section>
+
+        <!-- Footer -->
+        <footer>
+          <div class="pagination">
+            <!--<a href="#" class="previous">Prev</a>-->
+            <a href="#" class="page active">1</a>
+            <a href="{% url 'pag2' %}" class="page" target="_blank">2</a>
+            <a href="#" class="page">3</a>
+            <span class="extra">&hellip;</span>
+            <a href="#" class="page">8</a>
+            <a href="#" class="page">9</a>
+            <a href="#" class="page">10</a>
+            <a href="#" class="next">Siguiente</a>
+          </div>
+        </footer>
+        <div class="comentarios-nuevos">
+          <!-- Aquí se mostrarán los comentarios enviados -->
+        </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <form method="post" action="#">
+            <div class="fields">
+              <div class="field">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+              </div>
+              <div class="field">
+                <label for="message">Mensaje</label>
+                <textarea name="message" id="message" rows="3"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li><input type="submit" value="Enviar Mensaje" /></li>
+            </ul>
+          </form>
+        </section>
+        <section class="split contact">
+          <section class="alt">
+            <h3>Direccion :</h3>
+            <p>
+              Freire 857, San Bernardo.<br />
+              
+            </p>
+          </section>
+          <section>
+            <h3>Contacto :</h3>
+            <p><a href="#">229993373</a></p>
+          </section>
+          <section>
+            <h3>Email :</h3>
+            <p><a href="https://www.duoc.cl/sedes/san-bernardo/servicios/">@duocuc.cl</a></p>
+          </section>
+          <section>
+            <h3>Redes :</h3>
+            <ul class="icons alt">
+              <li>
+                <a href="https://twitter.com/DuocUC" class="icon brands alt fa-twitter"
+                  ><span class="label">Twitter</span></a
+                >
+              </li>
+              <li>
+                <a href="https://www.facebook.com/DuocUC/" class="icon brands alt fa-facebook-f"
+                  ><span class="label">Facebook</span></a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/duocuc_cl/" class="icon brands alt fa-instagram"
+                  ><span class="label">Instagram</span></a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/DuocUCvideos" class="icon brands alt fa-youtube"
+                  ><span class="label">YouTube</span></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+      </footer>
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/browser.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/util.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/main.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/scripts.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/hola.js' %}"></script>
+    
+    
+    
+  </body>
+</html>

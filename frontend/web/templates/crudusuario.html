@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuario Normal</title>
+    <!-- Enlaza tus archivos CSS -->
+    <link rel="stylesheet" href="{% static 'crudusuario/css/vip.css' %}" />
+    <link rel="stylesheet" href="{% static 'crudusuario/css/sidebar.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <h1 class="header-title">
+          <i class="fas fa-user-circle"></i> Panel de Usuario
+        </h1>
+        <!-- Botón para abrir el sidebar con un icono de menú -->
+        <button id="openSidebarBtn" class="sidebar-toggle-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="navigation">
+      <ul>
+        <li>
+          <a href="{% url 'pagprincipalusuario' %}"
+            ><i class="fas fa-home"></i> PagPrincipal</a
+          >
+        </li>
+        <li>
+          <a href="{% url 'anime_saludusuario' %}"
+            ><i class="fas fa-heartbeat"></i> Anime/Salud</a
+          >
+        </li>
+        <li>
+          <a href="{% url 'galeriausuario' %}"
+            ><i class="fas fa-images"></i> Galeria</a
+          >
+        </li>
+        <li>
+          <a href="{% url 'nosotrosusuario' %}"
+            ><i class="fas fa-question-circle"></i> Nosotros...</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar lateral -->
+    <aside id="sidebar" class="sidebar">
+      <button id="mostrarCuentaBtnUsuario" class="sidebar-btn">
+        Mostrar Cuenta <i class="fas fa-user"></i>
+      </button>
+      <button id="actualizarSesionBtnUsuario" class="sidebar-btn">
+        Actualizar Cuenta <i class="fas fa-sync-alt"></i>
+      </button>
+      <button id="eliminarCuentaBtnUsuario" class="sidebar-btn">
+        Eliminar Cuenta <i class="fas fa-trash-alt"></i>
+      </button>
+
+      <!-- Nuevas opciones -->
+
+      <button
+        id="cerrarSesionBtnUsuario"
+        class="sidebar-btn"
+        onclick="window.location.href='{% url 'inicio_sesion' %}'"
+      >
+        Cerrar Sesión <i class="fas fa-sign-out-alt"></i>
+      </button>
+      <!-- Botones de redes sociales -->
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      </div>
+    </aside>
+
+    <!-- Ventana modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close-btn">&times;</span>
+        <h2>Detalles de la Cuenta</h2>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Ventana modal para actualizar cuenta -->
+    <div id="updateModal" class="modal">
+      <div class="modal-content">
+        <span id="closeUpdateModalBtn" class="close-btn">&times;</span>
+        <h2>Actualizar Cuenta</h2>
+        <form id="updateForm">
+          {% csrf_token %}
+          <label for="updateUsuario">Usuario:</label>
+          <input type="text" id="updateUsuario" name="updateUsuario" />
+          <label for="updateEmail">Email:</label>
+          <input type="email" id="updateEmail" name="updateEmail" />
+          <label for="updatePassword">Contraseña:</label>
+          <input type="password" id="updatePassword" name="updatePassword" />
+          <button type="button" id="saveUpdateBtn" class="modal-btn">
+            Guardar Cambios
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Ventana modal para confirmar eliminación de cuenta -->
+    <div id="confirmDeleteModal" class="modal">
+      <div class="modal-content">
+        <span id="closeConfirmDeleteModalBtn" class="close-btn">&times;</span>
+        <h2>Confirmar Eliminación</h2>
+        <p>¿Estás seguro de que deseas eliminar tu cuenta?</p>
+        <button type="button" id="confirmDeleteBtn" class="modal-btn">
+          Sí, eliminar
+        </button>
+        <button type="button" id="cancelDeleteBtn" class="modal-btn">
+          Cancelar
+        </button>
+      </div>
+    </div>
+
+    <!-- Ventana modal para éxito en eliminación de cuenta -->
+    <div id="successDeleteModal" class="modal">
+      <div class="modal-content">
+        <span id="closeSuccessDeleteModalBtn" class="close-btn">&times;</span>
+        <h2>Cuenta Eliminada</h2>
+        <p>Tu cuenta ha sido eliminada con éxito.</p>
+      </div>
+    </div>
+
+    <!-- Enlaza tus archivos JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'crudusuario/js/vip.js' %}"></script>
+    <script src="{% static 'crudusuario/js/sidebar.js' %}"></script>
+  </body>
+</html>

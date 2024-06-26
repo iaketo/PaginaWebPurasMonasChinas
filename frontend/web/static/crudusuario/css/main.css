@@ -1,0 +1,118 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para el encabezado */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.header-title i {
+  margin-right: 10px;
+}
+
+/* Estilos para la barra de navegación */
+.navigation {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navigation ul li:last-child {
+  margin-right: 0;
+}
+
+.navigation ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navigation ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para el sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  padding-top: 60px;
+  background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center;
+  transition: 0.3s;
+}
+
+.sidebar-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #555;
+  border: none;
+  color: white;
+  margin-bottom: 5px;
+}
+
+/* Estilos para el botón de abrir el sidebar */
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 30px;
+  right: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Efecto de hover para botones */
+.sidebar-btn:hover {
+  background-color: #777;
+}
+
+/* Transición para el sidebar */
+.sidebar-transition {
+  transition: right 0.3s;
+}
+
+body {
+  background-color: #000000; /* Cambia el fondo a blanco */
+  background-image: url("/static/crudusuario/img/terry.gif");
+  background-size: 100vw 100vh; /* Ajusta el tamaño de la imagen para cubrir toda la página */
+  background-repeat: no-repeat;
+  /* Asegúrate de ajustar la ruta según tu configuración */
+}

@@ -1,0 +1,289 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Nosotros / Monites</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'galeria/css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'paginaprincipal/css/styles.css' %}">
+		<noscript><link rel="stylesheet" href="{% static 'galeria/css/noscript.css' %}"  /></noscript>
+		<link rel="stylesheet" href="{% static 'paginaprincipal/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'paginaprincipal/css/styles.css' %}">
+    <noscript><link rel="stylesheet" href="{% static 'paginaprincipal/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+				<header id="header">
+					<a href="{% url 'pagina_principal' %}" class="logo">Volver a la pagina principal</a>
+				</header>
+
+				<!-- Botón "Adicional" en la esquina derecha superior -->
+				<div id="menu-btn-container">
+					<div class="menu-btn" id="menu-btn">≡MENU DUEÑO</div>
+				</div>
+				<!-- Panel lateral oculto -->
+				<div id="sidebar">
+					<ul>
+						<ul>
+							<li><a href="{% url 'crudboss' %}"><i class="fas fa-cogs"></i> >Configuracion</a></li>
+				<li class="active"><a href="{% url 'pagprincipalboss' %}"><i class="fas fa-home"></i> >Página
+						Principal</a></li>
+				<li><a href="{% url 'anime_saludboss' %}"><i class="fas fa-heartbeat"></i> >Anime/Salud</a></li>
+				<li><a href="{% url 'galeriaboss' %}"><i class="fas fa-images"></i> >Galería de Monites</a></li>
+				<li><a href="{% url 'nosotrosboss' %}"><i class="fas fa-check"></i> >Nosotros</a></li>
+						</ul>
+					</ul>
+					<ul class="icons">
+						<li>
+							<a href="https://twitter.com/?lang=es" class="icon brands fa-twitter"><span
+									class="label">Twitter</span></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/" class="icon brands alt fa-youtube"><span
+									class="label">YouTube</span></a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/" class="icon brands fa-facebook-f"><span
+									class="label">Facebook</span></a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/" class="icon brands fa-instagram"><span
+									class="label">Instagram</span></a>
+						</li>
+						<li>
+							<a href="https://github.com/" class="icon brands fa-github"><span class="label">GitHub</span></a>
+						</li>
+					</ul>
+					<a href="#" id="close-btn" class="close-btn">×</a>
+				</div>
+				<!-- Header -->
+				<header id="header">
+					<div id="welcome-message"></div>
+					<div id="user-info">
+						{% if username %}
+						Bienvenido, {{ username }}
+						{% else %}
+						Bienvenido, invitado... <a href="http://localhost:9020/web/inicio_sesion/">registrate aca</a>
+						{% endif %}
+					</div>
+		
+					<a href="#" id="logoutButton" class="logo">login</a>
+		
+		
+				</header>
+			</body>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="{% url 'pagprincipalboss' %}">Pagina Principal</a></li>
+							<li><a href="{% url 'anime_saludboss' %}">Anime/Salud</a></li>
+							<li></li><a href="{% url 'galeriaboss' %}">Galeria de monites</a></li>
+							<li class="active"><a href="{% url 'nosotrosboss' %}">Nosotros</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Nosotros<br />
+									Quienes Somos</h1>
+								</header>
+
+								<!-- Text stuff -->
+									<h2> Información </h2>
+									<p>Este apartado está dedicado solo para dar a conocer quienes son los miembros del pequeño equipo de trabajo detras de esta 
+										<strong>página web</strong>. </p> 
+
+										<header>
+											<h2>Ubicación de nuestra sede</h2>
+										</header>
+								
+										<header>
+											<iframe
+												src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5039673298456!2d-70.70700428791187!3d-33.59222610467705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+																		1!3m3!1m2!1s0x9662d95a86f169a5%3A0x905d124b0e968095!2sPlaza%20de%20Armas%20de%20San%20Bernardo!5e0!3m2!1ses!2scl!4v1716408374164!5m2!1ses!2scl"
+												width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+												referrerpolicy="no-referrer-when-downgrade"></iframe>
+										</header>
+								
+										<p>Si lo deseas puedes NO irnos a visitar a nuestro equipo de trabajo en este lugar señalado en el mapa ya que
+											aún está en construcción.</p>
+								
+										<h2>Miembros:</h2>
+								
+								
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-3">
+													<a href="https://steamcommunity.com/profiles/76561199029312280/" target="_blank" >
+														<span class="image fit">
+															<img src="{% static 'images/alvaro.jpg' %}" alt="alvaro" />
+														</span>
+													</a>
+													<i>Alvaro Eyzaguirre</i>
+												</div>
+												<div class="col-3">
+													<a href="https://steamcommunity.com/profiles/76561198996479691/" target="_blank" >
+														<span class="image fit">
+															<img src="{% static 'images/demis.jpg' %}" alt="demis" />
+														</span>
+													</a>
+													<i>Demis Diaz</i>
+												</div>
+												<div class="col-3">
+													<a href="https://steamcommunity.com/id/MrLazz/" target="_blank" >
+														<span class="image fit">
+															<img src="{% static 'images/marcelo.jpg' %}" alt="marcelo" />
+								
+														</span>
+													</a>
+													<i>Marcelo Baeza</i>
+												</div>
+												<div class="col-3">
+													<a href="https://steamcommunity.com/id/iaket/" target="_blank">
+														<span class="image fit">
+															<img src="{% static 'images/nicolas.jpg' %}" alt="nicolas" />
+														</span>
+													</a>
+													<i>Nicolás Troncoso</i>
+												</div>
+												
+												
+											</div>
+										</div>
+										<!--COMENTARIOS-->
+<div class="comentarios">
+	<h2>Deja un comentario</h2>
+	<form id="formulario-comentario">
+	<label for="nombre">Usuario:</label><br>
+	<input type="text" id="nombre" name="nombre" required><br>
+	<label for="comentario">Comentario:</label><br>
+	<textarea id="comentario" name="comentario" rows="4" required></textarea><br>
+	<button type="submit">Comentar</button>
+	</form>
+	</div>
+	<div class="comentarios">
+	<h2>Comentarios anteriores</h2>
+	<div>
+	<strong>Eduardo Castañeda:</strong> Hace 1 dia... <br>Este mensaje estatico es de ejemplo de
+	comentarios. <br>
+	<strong>Sargento Fuertón:</strong> Hace 1 dia... <br>Al igual que este...<br>
+	<strong>Neco Arc:</strong> Hace 3 meses... <br>Burenyuu~<br>
+	<strong>Mario Diaz:</strong> Hace 5 meses... <br>Que mala onda.<br>
+	<strong>Eduardo Castañeda:</strong> Hace 7 meses... <br>Este mensaje estatico es de ejemplo de
+	comentarios... como todos. (No son dinámicos).<br>
+	</div>
+	</div>
+								</div>
+								
+
+
+
+								
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>CONTACTANOS</h2>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Nombre</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Correo electrónico</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Mensaje</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Enviar mensaje" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Dirección</h3>
+								<p>DUOCUC<br />
+								SAN BERNARDO</p>
+							</section>
+							<section>
+								<h3>Fono</h3>
+								<p>(569) 666-6666</p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p>duocuc@duocuc.cl</p>
+							</section>
+							<section>
+								<h3>Redes Sociales</h3>
+								<ul class="icons alt">
+									<li><a href="https://twitter.com/i/flow/login" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://es-la.facebook.com/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/?hl=en" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Monites Chines</li><li>Diseñado con <a href="https://html5up.net">OOOOOOOOOOOOOO</a></li></ul>
+					</div>
+
+			</div>
+
+	<!-- Scripts -->
+	<script src="{% static 'galeria/js/jquery.min.js' %}"></script>
+    <script src="{% static 'galeria/js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'galeria/js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'galeria/js/browser.min.js' %}"></script>
+    <script src="{% static 'galeria/js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'galeria/js/util.js' %}"></script>
+    <script src="{% static 'galeria/js/main.js' %}"></script>
+	<script src="{% static 'paginaprincipal/js/scripts.js' %}"></script>
+
+	<!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'paginaprincipal/js/comentarios.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/browser.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/util.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/main.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/scripts.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/script.js' %}"></script>
+
+	</body>
+</html>

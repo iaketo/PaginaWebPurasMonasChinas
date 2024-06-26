@@ -1,0 +1,137 @@
+/* Estilos para el botón principal */
+#menu-btn-container {
+  position: fixed;
+  top: 20px;
+  right: 20px; /* Ajustado para que el botón esté en la esquina superior derecha */
+  z-index: 1000;
+}
+
+.menu-btn {
+  display: inline;
+  height: 40px;
+  line-height: 40px;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.075em;
+}
+
+.menu-btn:hover {
+  text-decoration: underline;
+  color: #ff69b4;
+  background: transparent;
+}
+
+/* Estilos para el panel lateral */
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 999;
+  overflow: hidden;
+}
+
+/* Estilos para la lista de iconos */
+#sidebar ul.icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Mostrar los elementos en una fila */
+  justify-content: space-around; /* Distribuir los elementos uniformemente */
+  align-items: center; /* Centrar verticalmente los elementos */
+  margin-top: 10px; /* Ajuste de margen superior */
+}
+
+#sidebar ul.icons li {
+  margin: 0;
+}
+
+#sidebar ul.icons li a {
+  color: #000;
+  font-size: 20px; /* Cambia el tamaño de los iconos según sea necesario */
+  padding: -1px; /* Aumenta el espacio alrededor del icono */
+  border-radius: 60%; /* Hace que el borde sea circular */
+  background-color: #ccc; /* Color de fondo del círculo */
+  display: inline-flex; /* Para que el contenedor se ajuste al contenido */
+  align-items: center; /* Centra verticalmente el icono */
+  justify-content: center; /* Centra horizontalmente el icono */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  margin-right: 10px; /* Espacio entre los iconos */
+}
+
+#sidebar ul.icons li a:hover {
+  background-color: #ff69b4; /* Cambia el color del círculo al pasar el cursor */
+  color: #ff69b4; /* Cambia el color al pasar el cursor */
+}
+#sidebar ul {
+  padding: 20px 0;
+  margin-top: 20px; /* Ajusta el espacio para dejar lugar al botón de cierre */
+}
+
+#sidebar ul li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+#sidebar ul li a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+#sidebar ul li a i {
+  margin-right: 10px;
+}
+
+/* Estilos para el botón de cerrar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #888;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff69b4;
+  cursor: pointer;
+}
+
+/* Estilos para el botón adicional */
+#additional-btn-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.additional-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000;
+  background: transparent;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.additional-btn:hover {
+  color: #ff69b4;
+  cursor: pointer;
+}

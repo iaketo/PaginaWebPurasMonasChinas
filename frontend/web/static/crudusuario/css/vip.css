@@ -1,0 +1,151 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para el encabezado */
+.header {
+  background-color: #3f6daa;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(255, 61, 61, 0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.header-title i {
+  margin-right: 10px;
+}
+
+/* Estilos para la barra de navegación */
+.navigation {
+  background-color: #4988bb;
+  padding: 10px;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navigation ul li:last-child {
+  margin-right: 0;
+}
+
+.navigation ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navigation ul li a:hover {
+  text-decoration: underline;
+}
+/* Estilos para el sidebar */
+.sidebar {
+  position: fixed;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  padding-top: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: right 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-image: url("/static/crudusuario/img/fatal.gif");
+  border-left: 2px solid #000000; /* Agregamos un borde derecho de 2px sólido y color gris claro */
+  border-top: 2px solid #000000; /* Agregamos un borde derecho de 2px sólido y color gris claro */
+}
+
+/* Estilos para los botones del sidebar */
+.sidebar-btn {
+  display: block;
+  width: 100%;
+  padding: 15px 20px; /* Aumentamos el padding para hacerlos más grandes */
+  text-align: center; /* Centramos el texto */
+  background-color: #555; /* Color de fondo más oscuro */
+  border: none;
+  color: white;
+  margin-bottom: 10px; /* Aumentamos el margen inferior */
+  font-size: 18px; /* Tamaño de fuente ligeramente más grande */
+  border-radius: 5px; /* Añadimos bordes redondeados */
+  cursor: pointer; /* Cambiamos el cursor al pasar sobre ellos */
+  transition: background-color 0.3s, color 0.3s; /* Añadimos transiciones en los cambios de color */
+}
+
+/* Efecto de hover para botones */
+.sidebar-btn:hover {
+  background-color: #0056b3; /* Color de fondo más oscuro al hacer hover */
+  color: #ffffff; /* Cambiamos el color del texto a blanco */
+}
+
+/* Estilos para el botón de abrir el sidebar */
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 30px;
+  right: 10px;
+  background-color: #2d3b6b44;
+  color: rgb(71, 71, 71);
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Transición para el sidebar */
+.sidebar-transition {
+  transition: right 0.3s;
+}
+
+.social-icons {
+  margin-top: 20px; /* Espacio entre los botones y los íconos de redes sociales */
+  text-align: center; /* Centramos los íconos de redes sociales */
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 10px; /* Espacio entre los íconos de redes sociales */
+  color: #fff; /* Color de los íconos de redes sociales */
+  font-size: 20px; /* Tamaño de los íconos de redes sociales */
+  text-decoration: none; /* Quitamos la subrayado de los enlaces */
+  transition: color 0.3s, background-color 0.3s; /* Transición de color al hacer hover */
+  background-color: rgb(
+    71,
+    71,
+    71
+  ); /* Color de fondo de los íconos de redes sociales */
+
+  padding: 10px; /* Espacio interior dentro del botón */
+  border-radius: 20px; /* Borde redondeado del botón */
+}
+
+.social-icon:hover {
+  color: #007bff; /* Cambio de color al pasar el mouse sobre los íconos de redes sociales */
+}
+body {
+  background-color: #000000; /* Cambia el fondo a blanco */
+  background-image: url("/static/crudusuario/img/bleh.gif");
+  background-size: 100vw 100vh; /* Ajusta el tamaño de la imagen para cubrir toda la página */
+  background-repeat: no-repeat;
+  /* Asegúrate de ajustar la ruta según tu configuración */
+}

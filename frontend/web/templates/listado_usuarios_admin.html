@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado de Usuarios Registrados</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}"
+    />
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("D:/2do año/Programacion Web/Nueva pag web/Reemplazo web/proyecto/web/static/images/anime.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .container {
+        margin: 0 auto;
+        padding: 1px;
+        margin-left: 0px;
+        background-color: rgba(
+          143,
+          140,
+          250,
+          0.7
+        ); /* Fondo semi-transparente */
+      }
+
+      h1 {
+        text-align: left;
+      }
+
+      ul {
+        list-style-type: armenian;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+        border: 1px solid #ff0505;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Listado de Usuarios Registrados</h1>
+      <ul id="user-list">
+        <!-- Los usuarios se agregarán aquí mediante JavaScript -->
+      </ul>
+    </div>
+
+    <script>
+      // Simulación de datos de usuarios
+      const users = [
+        { id: 1, nombre: "Juan", apellido: "Pérez", email: "juan@example.com" },
+        {
+          id: 2,
+          nombre: "María",
+          apellido: "García",
+          email: "maria@example.com",
+        },
+        {
+          id: 3,
+          nombre: "Carlos",
+          apellido: "López",
+          email: "carlos@example.com",
+        },
+      ];
+
+      // Función para mostrar usuarios en la lista
+      function mostrarUsuarios() {
+        const userList = document.getElementById("user-list");
+
+        // Limpiar la lista antes de agregar los usuarios
+        userList.innerHTML = "";
+
+        // Iterar sobre los usuarios y agregarlos a la lista
+        users.forEach((user) => {
+          const listItem = document.createElement("li");
+          listItem.innerHTML = `
+          <strong>Nombre:</strong> ${user.nombre} ${user.apellido}<br>
+          <strong>Email:</strong> ${user.email}
+        `;
+          userList.appendChild(listItem);
+        });
+      }
+
+      // Llamar a la función para mostrar usuarios al cargar la página
+      mostrarUsuarios();
+    </script>
+  </body>
+</html>

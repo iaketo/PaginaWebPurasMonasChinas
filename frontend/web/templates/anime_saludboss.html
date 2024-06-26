@@ -1,0 +1,297 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Anime/Salud</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{% static 'anime-salud/css/main.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'anime-salud/css/imagenes.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'anime-salud/css/imagenes2.css' %}">
+	<link rel="stylesheet" href="{% static 'paginaprincipal/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'paginaprincipal/css/styles.css' %}">
+    <noscript><link rel="stylesheet" href="{% static 'paginaprincipal/css/noscript.css' %}" /></noscript>
+	
+	
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- encabezado -->
+		<header id="header">
+			<a href="{% url 'pagina_principal' %}" class="logo">Chinas Monas</a>
+		</header>
+
+		<!-- Botón "Adicional" en la esquina derecha superior -->
+        <div id="menu-btn-container">
+            <div class="menu-btn" id="menu-btn">≡MENU VIP</div>
+        </div>
+        <!-- Panel lateral oculto -->
+        <div id="sidebar">
+            <ul>
+                <ul>
+                    <li><a href="{% url 'crudboss' %}"><i class="fas fa-cogs"></i> >Configuracion</a></li>
+					<li ><a href="{% url 'pagprincipalboss' %}"><i class="fas fa-home"></i> >Página
+							Principal</a></li>
+					<li class="active"><a href="{% url 'anime_saludboss' %}"><i class="fas fa-heartbeat"></i> >Anime/Salud</a></li>
+					<li><a href="{% url 'galeriaboss' %}"><i class="fas fa-images"></i> >Galería de Monites</a></li>
+					<li><a href="{% url 'nosotrosboss' %}"><i class="fas fa-check"></i> >Nosotros</a></li>
+                </ul>
+            </ul>
+            <ul class="icons">
+                <li>
+                    <a href="https://twitter.com/?lang=es" class="icon brands fa-twitter"><span
+                            class="label">Twitter</span></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" class="icon brands alt fa-youtube"><span
+                            class="label">YouTube</span></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/" class="icon brands fa-facebook-f"><span
+                            class="label">Facebook</span></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" class="icon brands fa-instagram"><span
+                            class="label">Instagram</span></a>
+                </li>
+                <li>
+                    <a href="https://github.com/" class="icon brands fa-github"><span class="label">GitHub</span></a>
+                </li>
+            </ul>
+            <a href="#" id="close-btn" class="close-btn">×</a>
+        </div>
+        <!-- Header -->
+        <header id="header">
+            <div id="welcome-message"></div>
+            <div id="user-info">
+                {% if username %}
+                Bienvenido, {{ username }}
+                {% else %}
+                Bienvenido, invitado... <a href="http://localhost:9020/web/inicio_sesion/">registrate aca</a>
+                {% endif %}
+            </div>
+
+            <a href="#" id="logoutButton" class="logo">login</a>
+
+
+        </header>
+</body>
+
+		<!-- Navegador -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="{% url 'pagprincipalboss' %}">Pag principal</a></li>
+				<li class="active"><a href="{% url 'anime_saludboss' %}">Anime/Salud</a></li>
+				<li><a href="{% url 'galeriaboss' %}">Galeria De Monites</a></li>
+				<li><a href="{% url 'nosotrosboss' %}">Nosotros</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://www.youtube.com/watch?v=OxgwsnlFfj4" class="icon brands fa-twitter"><span
+							class="label">Twitter</span></a></li>
+				<li><a href="https://www.youtube.com/watch?v=7IAinPAadew" class="icon brands fa-facebook-f"><span
+							class="label">Facebook</span></a></li>
+				<li><a href="https://www.youtube.com/shorts/21uI0C0qC_s" class="icon brands fa-instagram"><span
+							class="label">Instagram</span></a></li>
+				<li><a href="https://www.youtube.com/watch?v=KvMY1uzSC1E" class="icon brands fa-github"><span
+							class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Post -->
+			<section class="post">
+				<header class="major">
+					<span class="date">abril 13 - 2024</span>
+					<h1>Porque el anime es<br />
+						Bueno pa' la salud</h1>
+					<p>Un grupo de psicólogos canadienses determinó que estos factores de percepción resultan esenciales
+						ante la prevención de enfermedades mentales.
+						Quizá suene un poco increíble, pero lo cierto es que ser espectador de esta
+						manifestación artística podría otorgarte ciertas barreras de inmunidad ante posibles daños
+						neurológicos.</p>
+				</header>
+				<a href="https://www.youtube.com/watch?v=1_ZA5zBqor0" target="_blank" class="link">
+					<div class="animatable" style="background-image: url('{% static 'images/sailormoon.webp' %}');" alt="Imagen 1"></div>
+				</a><br>
+				<h1>Impulsa la ética social <br />
+					en los niños</h1>
+				<p>“Dragon Ball” es una de las creaciones artísticas de la animación japonesa más importantes de la
+					historia, y si tuviste la oportunidad de disfrutar de ella durante tu infancia, habrás notado la
+					infinidad de valores que se incluían en ella. Pese a que la trama principal era de acción, también
+					hacía referencia a la ética de trabajo, la disciplina y el respeto hacia el prójimo.
+					“Dragon Ball” influyó sobre la formación ética de muchos niños en todo el mundo, que desarrollaron
+					valentía y otros valores humanos esenciales desde temprana edad.</p>
+				<a href="https://www.youtube.com/watch?v=_37jJAl1c0g" target="_blank" class="link">
+					<div class="animatable" style="background-image: url('{% static 'images/dragonballz.jpg' %}');" alt="Imagen 2"></div>
+				</a><br>
+				<h1>En conclusión</h1>
+				<p>Como habrás notado, son muchas las cualidades positivas que otorga el anime a tu salud mental e
+					incluso a las relaciones familiares. Queda de tu parte adentrarte en este maravilloso mundo, conocer
+					cada uno de sus beneficios y otorgar el valor que generalmente no se le concede. Ver anime no te
+					hará “raro” como suele pensarse, así que rompe los estereotipos y forma parte de este impresionante
+					legado cultural.</p>
+				<a href="https://www.youtube.com/watch?v=KvMY1uzSC1E" target="_blank" class="link">
+					<div class="animatable" style="background-image: url('{% static 'images/david.jpg' %}');" alt="Imagen 3"></div>
+				</a><br>
+				<p>Aqui te dejamos una pequeña serie de animes para sanarte mentalmente <BR>(NO NOS HACEMOS RESPONSABLES SI
+					TE HACE EFECTO CONTRARIO)</p>
+					<div class="image-group">
+						<!-- Enlaces con contenedores de imágenes (segundo conjunto) -->
+						<a href="https://www.youtube.com/watch?v=lFsg_sDwlak" target="_blank" class="link2">
+							<div class="animatable2" style="background-image:url('{% static 'images/anohana.jpg'|escapejs %}');" alt="Imagen 6"></div>
+							<br><h6>Your Name</h6>
+						</a>
+					<a href="https://www.youtube.com/watch?v=oHdZOKm5xzo" target="_blank" class="link2">
+						<div class="animatable2" style="background-image: url('{% static 'images/clannad.jpg' %}');" alt="Imagen 5"></div>
+						<br><h6>Clannad</h6>
+					</a>
+					<a href="https://www.youtube.com/watch?v=lFsg_sDwlak" target="_blank" class="link2">
+						<div class="animatable2" style="background-image:url('{% static 'images/your name.jpg'|escapejs %}');" alt="Imagen 6"></div>
+						<br><h6>Your Name</h6>
+					</a>
+					<a href="https://www.youtube.com/watch?v=fWRPihlt2ho" target="_blank" class="link2">
+						<div class="animatable2" style="background-image:  url('{% static 'images/your lie in april.jpg'|escapejs %}');" alt="Imagen 7"></div>
+						<br><h6>Your Lie In April</h6>
+					</a>
+					<a href="https://www.youtube.com/watch?v=fodAJ-1dN3I" target="_blank" class="link2">
+						<div class="animatable2" style="background-image: url('{% static 'images/erased.jpg' %}');" alt="Imagen 8"></div>
+						<br><h6>Erased</h6>
+					</a>
+					<a href="https://www.youtube.com/watch?v=hzYnVZlMc00" target="_blank" class="link2">
+						<div class="animatable2" style="background-image:url('{% static 'images/iwanteatyourpancreas.jpg' %}');" alt="Imagen 9"></div>
+						<br><h6>I Want To Eat Your Pancreas</h6>
+					</a>
+
+					<br>
+				</div>
+		<br>
+
+		<div class="comentarios">
+			<h2>Deja un comentario</h2>
+			<form id="formulario-comentario">
+			<label for="nombre">Usuario:</label><br>
+			<input type="text" id="nombre" name="nombre" required><br>
+			<label for="comentario">Comentario:</label><br>
+			<textarea id="comentario" name="comentario" rows="4" required></textarea><br>
+			<button type="submit">Comentar</button>
+			</form>
+			</div>
+			<div class="comentarios">
+			<h2>Comentarios anteriores</h2>
+			<div>
+			<strong>Demis Diaz:</strong> Hace 2 semanas... <br>marce tomemoh
+			. <br>
+			<strong>Matias Guzman:</strong> Hace 1 dia... <br>¡¡¡DENME AMOOR!!!<br>
+			<strong>Neco Arc:</strong> Hace 3 meses... <br>Burenyuu~<br>
+			<strong>Mario Diaz:</strong> Hace 5 meses... <br>Que mala onda.<br>
+			<strong>Marcelo Baeza:</strong> Hace 7 meses... <br>Desinstalenme la vida.<br>
+			</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<section>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Nombre</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field">
+							<label for="email">Correo</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Mensaje</label>
+							<textarea name="message" id="message" rows="3"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Enviar Mensaje" /></li>
+					</ul>
+				</form>
+			</section>
+			<section class="split contact">
+				<section class="alt">
+					<h3>Dirección</h3>
+					<p>Santiago de chile<br />
+						San Bernardo, lugar con puerta y ventana.</p>
+				</section>
+				<section>
+					<h3>Numero Celular</h3>
+					<p><a href="#">+56 9 7353 3989</a></p>
+				</section>
+				<section>
+					<h3>Correo</h3>
+					<p><a href="#">ElAnimeLoEsTodo@gmail.com</a></p>
+				</section>
+				<section>
+					<h3>Redes Sociales</h3>
+					<ul class="icons alt">
+						<li><a href="https://www.youtube.com/watch?v=OxgwsnlFfj4"
+								class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.youtube.com/watch?v=7IAinPAadew"
+								class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a>
+						</li>
+						<li><a href="https://www.youtube.com/shorts/21uI0C0qC_s"
+								class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
+						</li>
+						<li><a href="https://www.youtube.com/watch?v=KvMY1uzSC1E"
+								class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</section>
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>&copy; ChinasMonas</li>
+				<li>DISEÑO/BOCETO: <a href="https://html5up.net">HTML5 UP (Pagina Utilizada Como Boceto)</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="{% static 'anime-salud/js/jquery.min.js' %}"></script>
+    <script src="{% static 'anime-salud/js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'anime-salud/js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'anime-salud/js/browser.min.js' %}"></script>
+    <script src="{% static 'anime-salud/js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'anime-salud/js/util.js' %}"></script>
+    <script src="{% static 'anime-salud/js/main.js' %}"></script>
+	
+	<!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'paginaprincipal/js/comentarios.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/browser.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/util.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/main.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/scripts.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/script.js' %}"></script>
+
+
+</body>
+
+</html>

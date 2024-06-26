@@ -1,0 +1,471 @@
+{% load static %}
+<!DOCTYPE html>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>¡Pagina 2!</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="{% static 'paginaprincipal/css/main.css' %}" />
+    <noscript><link rel="stylesheet" href="{% static 'paginaprincipal/css/noscript.css' %}" /></noscript>
+    <link rel="stylesheet" href="{% static 'paginaprincipal/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'paginaprincipal/css/styles.css' %}">
+    <noscript><link rel="stylesheet" href="{% static 'paginaprincipal/css/noscript.css' %}" /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+      <!-- Intro -->
+      <div id="intro">
+        <h1>
+          Puros Monos <br />
+          Chinos
+        </h1>
+        <p>
+          Una pagina dedicada a la adoracion hacia los/as monitos chinos. 
+          Creado
+          por:
+          <a style="color: lightpink;" href="https://steamcommunity.com/id/MrLazz/">@Marcelo Baeza</a>
+
+          <a style="color: rgb(217, 147, 237);" href="https://steamcommunity.com/profiles/76561199029312280/"
+            >@Alvaro eyzaguirre</a
+          >
+          <a style="color: skyblue;" href="https://steamcommunity.com/id/iaket/"> @Nicolas Troncoso </a>
+          Para
+          <a
+            href="https://www.w3schools.com/bootstrap/bootstrap_get_started.asp"
+            >La clase del tio harrys.</a
+          >
+          <br />
+          esto fue inspirado y estructurado gracias a :
+          <a href="https://html5up.net/license"
+            >Pagina De Free Html Templates.</a
+          >.
+        </p>
+        <ul class="actions">
+          <li>
+            <a
+              href="#header"
+              class="button icon solid solo fa-arrow-down scrolly"
+              >Continuar</a
+            >
+          </li>
+        </ul>
+      </div>
+      <header id="header">
+        <a href="{% url 'pag2' %}" class="logo">Inicio</a>
+
+      </header>
+
+      <!-- Botón "Adicional" en la esquina derecha superior -->
+      <div id="menu-btn-container">
+        <div class="menu-btn" id="menu-btn">≡MENU VIP</div>
+    </div>
+    <!-- Panel lateral oculto -->
+    <div id="sidebar">
+        <ul>
+            <ul>
+              <li><a href="{% url 'crudVIP' %}"><i class="fas fa-cogs"></i> >Configuracion</a></li>
+              <li class="active"><a href="{% url 'pagprincipalvip1' %}"><i class="fas fa-home"></i> >Página
+                  Principal</a></li>
+              <li><a href="{% url 'anime_saludvip' %}"><i class="fas fa-heartbeat"></i> >Anime/Salud</a></li>
+              <li><a href="{% url 'galeriavip' %}"><i class="fas fa-images"></i> >Galería de Monites</a></li>
+              <li><a href="{% url 'nosotrosvip' %}"><i class="fas fa-check"></i> >Nosotros</a></li>
+              <li><a id="cerrar-sesion"><i class="fas fa-sign-out-alt"></i> >Cerrar Sesion</a></li>
+
+            </ul>
+        </ul>
+        <ul class="icons">
+            <li>
+                <a href="https://twitter.com/?lang=es" class="icon brands fa-twitter"><span
+                        class="label">Twitter</span></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/" class="icon brands alt fa-youtube"><span
+                        class="label">YouTube</span></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/" class="icon brands fa-facebook-f"><span
+                        class="label">Facebook</span></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" class="icon brands fa-instagram"><span
+                        class="label">Instagram</span></a>
+            </li>
+            <li>
+                <a href="https://github.com/" class="icon brands fa-github"><span class="label">GitHub</span></a>
+            </li>
+        </ul>
+        
+        <a href="#" id="close-btn" class="close-btn">×</a>
+    </div>
+    <!-- Header -->
+    <header id="header">
+        <div id="welcome-message"></div>
+        <div id="user-info">
+            {% if username %}
+            Bienvenido, {{ username }}
+            {% else %}
+            Bienvenido, invitado... <a href="http://localhost:9020/web/inicio_sesion/">registrate aca</a>
+            {% endif %}
+        </div>
+
+        <a href="#" id="logoutButton" class="logo">login</a>
+
+
+    </header>
+</body>
+
+
+
+
+      <!-- Nav -->
+      <nav id="nav">
+        <ul class="links">
+          <li class="active"><a href="{% url 'pagprincipalvip1' %}">Pagina Principal</a></li>
+          <li><a href="{% url 'anime_saludvip' %}">Anime/Salud</a></li>
+          <li><a href="{% url 'galeriavip' %}">Galeria De Monites</a></li>
+          <li><a href="{% url 'nosotrosvip' %}">Nosotros</a></li>
+          
+        </ul>
+        <ul class="icons">
+          <li>
+            <a
+              href="https://twitter.com/?lang=es"
+              class="icon brands fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+            <li>
+              <a href="https://www.youtube.com/" class="icon brands alt fa-youtube"
+                ><span class="label">YouTube</span></a
+              >
+            </li>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/"
+              class="icon brands fa-facebook-f"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/"
+              class="icon brands fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+        </li>
+        <li>
+            <a href="https://github.com/" class="icon brands fa-github"
+            ><span class="label">GitHub</span></a
+            >
+        </li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <!-- Featured Post -->
+        <article class="post featured">
+        <header class="major">
+            <span class="date">Actualizada el abril 14,2024</span>
+            <h1> Estas actualmente en Pagina la 2 :D</h1>
+        
+            
+        </header>
+
+
+        
+
+        <!-- Posts -->
+        <section class="posts">
+          <article>
+            <header>
+              <span class="date">Febrero 13, 2024</span>
+              <h2>
+                <a href="#"
+                  >Animes Comedia<br />
+                  </a
+                >
+              </h2>
+            </header>
+            <a href="#" class="image fit"
+              ><img src="{% static 'images/anime_comedia.jpg' %}" alt=""
+            /></a>
+            <p>
+              Aca encontraras la seccion de los mejores animes de comedia de los ultimos tiempos.
+            </p>
+            <ul class="actions special">
+              <li><a href="https://www.youtube.com/watch?v=CqUR-kie4UA&pp=ygUOYW5pbWVzIGNvbWVkaWE%3D" class="button">Ver</a></li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <span class="date">Febrero 10, 2024</span>
+              <h2>
+                <a href="#"
+                  >Animes Viajes en el tiempo<br />
+                  </a
+                >
+              </h2>
+            </header>
+            <a href="#" class="image fit"
+              ><img src="{% static 'images/anime_viaje_tiempo.jpg' %}" alt=""
+            /></a>
+            <p>
+              Aca veras los mejores animes donde el prota viaja en el tiempo para resolver una situacion.
+              .
+            </p>
+            <ul class="actions special">
+              <li><a href="https://www.youtube.com/watch?v=oY3lki-9n2A&pp=ygUaYW5pbWVzIHZpYWplcyBlbiBlbCB0aWVtcG8%3D" class="button">Ver</a></li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <span class="date">Febrero 08, 2024</span>
+              <h2>
+                <a href="#"
+                  >Animes Samurais<br />
+                  </a
+                >
+              </h2>
+            </header>
+            <a href="#" class="image fit"
+              ><img src="{% static 'images/title-image-samurai-anime.jpg' %}" alt=""
+            /></a>
+            <p>
+              Aca veran la seccion donde las katanas se sacuden y el gore es lo que menos falta
+              donde o seras de la epoca del shogun a la epoca de asesinar demonios, aca encontraras
+              todos los animes de samurais donde quedaras asombrado por su manejo con la espada.
+            </p>
+            <ul class="actions special">
+              <li><a href="https://www.youtube.com/watch?v=AkyrcDmA8j8&pp=ygUPYW5pbWVzIHNhbXVyYWlz" class="button">Ver</a></li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <span class="date">Febrero 1, 2024</span>
+              <h2>
+                <a href="#"
+                  >Animes Shojo<br />
+                  </a
+                >
+              </h2>
+            </header>
+            <a href="#" class="image fit"
+              ><img src="{% static 'images/anime_shojo.jpg' %}" alt=""
+            /></a>
+            <p>
+                El Shojo es prácticamente lo mismo que el “Shounen“, 
+                la unica diferencia es que el Shojo está más dirigido a un público femenino adolescente, 
+                el personaje principal siempre es una chica, generalmente adolescente 
+                y la trama del anime suele ir ligada más con las relaciones y el romance de una adolescente 
+                que la propia acción que define al género Shonen.
+            </p>
+            <ul class="actions special">
+              <li><a href="https://www.youtube.com/watch?v=CYNNLCzJvSY&pp=ygUMYW5pbWVzIHNob2pv" class="button">Ver</a></li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <span class="date">Enero 28, 2024</span>
+              <h2>
+                <a href="#"
+                  >Animes Isekais<br />
+                  </a
+                >
+              </h2>
+            </header>
+            <a href="#" class="image fit"
+              ><img src="{% static 'images/anime_isekais.jpg' %}" alt=""
+            /></a>
+            <p>
+                Isekai es un subgénero de fantasía japonesa,
+                y una temática típica del manga y anime que giran en torno a un personaje o 
+                un grupo de personajes de la Tierra que de manera intencional o accidental 
+                termina en un universo paralelo, un mundo de fantasía, un mundo virtual, 
+                en otro planeta o en el mismo.
+            </p>
+            <ul class="actions special">
+              <li><a href="https://www.youtube.com/watch?v=L1XPKjW81jo&pp=ygUNYW5pbWVzIGlzZWthaQ%3D%3D" class="button">Ver</a></li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <span class="date">Enero 17, 2024</span>
+              <h2>
+                <a href="#"
+                  >Animes Mechas<br />
+                  </a
+                >
+              </h2>
+            </header>
+            <a href="#" class="image fit"
+              ><img src="{% static 'images/anime_mecha.jpg' %}" alt=""
+            /></a>
+            <p>
+                Lo que más nos gusta al final del día es llegar a casa y ver a robots gigantes 
+                pegándose entre sí, es la verdad y cuando lo admitamos seremos felices. 
+                Por eso este género no es sólo para referirse al personaje de Overwatch que lleva a D.Va, 
+                es más que eso. Un género que adoramos generalmente con temática de ciencia ficción en 
+                el que podemos ver grandes robots peleando entre sí. Por supuesto no se deja de lado la comedia 
+                y podremos ver escenas muy entretenidas. Así te enseñamos cuáles son los diferentes géneros del 
+                anime y el manga.
+            </p>
+            <ul class="actions special">
+              <li><a href="https://www.youtube.com/watch?v=VwYfXXMzDUk&pp=ygUNYW5pbWVzIG1lY2hhcw%3D%3D" class="button">Ver</a></li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+          <div class="pagination">
+            <!--<a href="#" class="previous">Prev</a>-->
+            <a href="{% url 'pagina_principal' %}" class="page" target="_blank">1</a>
+            <a href="pag2.html" class="page active">2</a>
+            <a href="#" class="page">3</a>
+            <span class="extra">&hellip;</span>
+            <a href="#" class="page">8</a>
+            <a href="#" class="page">9</a>
+            <a href="#" class="page">10</a>
+            <a href="#" class="next">Siguiente</a>
+            
+          </div>
+          
+        </footer>
+        
+        <div class="comentarios">
+          <h2>Deja un comentario</h2>
+          <form id="formulario-comentario">
+          <label for="nombre">Usuario:</label><br>
+          <input type="text" id="nombre" name="nombre" required><br>
+          <label for="comentario">Comentario:</label><br>
+          <textarea id="comentario" name="comentario" rows="4" required></textarea><br>
+          <button type="submit">Comentar</button>
+          </form>
+          </div>
+          <div class="comentarios">
+          <h2>Comentarios anteriores</h2>
+          <div>
+          <strong>Demis Diaz:</strong> Hace 2 semanas... <br>marce tomemoh
+          . <br>
+          <strong>Matias Guzman:</strong> Hace 1 dia... <br>¡¡¡DENME AMOOR!!!<br>
+          <strong>Neco Arc:</strong> Hace 3 meses... <br>Burenyuu~<br>
+          <strong>Mario Diaz:</strong> Hace 5 meses... <br>Que mala onda.<br>
+          <strong>Marcelo Baeza:</strong> Hace 7 meses... <br>Desinstalenme la vida.<br>
+          </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <form method="post" action="#">
+            <div class="fields">
+              <div class="field">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+              </div>
+              <div class="field">
+                <label for="message">Mensaje</label>
+                <textarea name="message" id="message" rows="3"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li><input type="submit" value="Enviar Mensaje" /></li>
+            </ul>
+          </form>
+        </section>
+        <section class="split contact">
+          <section class="alt">
+            <h3>Direccion :</h3>
+            <p>
+              Freire 857, San Bernardo.<br />
+              
+            </p>
+          </section>
+          <section>
+            <h3>Contacto :</h3>
+            <p><a href="#">229993373</a></p>
+          </section>
+          <section>
+            <h3>Email :</h3>
+            <p><a href="https://www.duoc.cl/sedes/san-bernardo/servicios/">@duocuc.cl</a></p>
+          </section>
+          <section>
+            <h3>Redes :</h3>
+            <ul class="icons alt">
+              <li>
+                <a href="https://twitter.com/DuocUC" class="icon brands alt fa-twitter"
+                  ><span class="label">Twitter</span></a
+                >
+              </li>
+              <li>
+                <a href="https://www.facebook.com/DuocUC/" class="icon brands alt fa-facebook-f"
+                  ><span class="label">Facebook</span></a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/duocuc_cl/" class="icon brands alt fa-instagram"
+                  ><span class="label">Instagram</span></a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/DuocUCvideos" class="icon brands alt fa-youtube"
+                  ><span class="label">YouTube</span></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+      </footer>
+
+      <!-- Copyright -->
+      <div id="copyright">
+        <ul>
+          <li>&copy; Duoc Uc</li>
+          <li>Diseñado con: <a href="https://code.visualstudio.com/">Visual Studio Code HTML</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'paginaprincipal/js/jquery.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/browser.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/util.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/main.js' %}"></script>
+    
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'paginaprincipal/js/comentarios.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/browser.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/util.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/main.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/scripts.js' %}"></script>
+    <script src="{% static 'paginaprincipal/js/script.js' %}"></script>
+  </body>
+</html>
